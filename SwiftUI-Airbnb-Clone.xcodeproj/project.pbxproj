@@ -13,6 +13,7 @@
 		DF06FCE42BCEB4FC00BD0BC6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF06FCE32BCEB4FC00BD0BC6 /* Preview Assets.xcassets */; };
 		DF06FCFA2BCEBBB100BD0BC6 /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF06FCF92BCEBBB100BD0BC6 /* ExploreView.swift */; };
 		DF06FCFD2BCEBC7B00BD0BC6 /* ListingItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF06FCFC2BCEBC7B00BD0BC6 /* ListingItemView.swift */; };
+		DF06FCFF2BCECEB100BD0BC6 /* SearchAndFilterBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF06FCFE2BCECEB100BD0BC6 /* SearchAndFilterBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		DF06FCE32BCEB4FC00BD0BC6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DF06FCF92BCEBBB100BD0BC6 /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
 		DF06FCFC2BCEBC7B00BD0BC6 /* ListingItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingItemView.swift; sourceTree = "<group>"; };
+		DF06FCFE2BCECEB100BD0BC6 /* SearchAndFilterBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAndFilterBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				DF06FCF92BCEBBB100BD0BC6 /* ExploreView.swift */,
+				DF06FCFE2BCECEB100BD0BC6 /* SearchAndFilterBar.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 				DF06FCFD2BCEBC7B00BD0BC6 /* ListingItemView.swift in Sources */,
 				DF06FCDF2BCEB4FB00BD0BC6 /* ContentView.swift in Sources */,
 				DF06FCDD2BCEB4FB00BD0BC6 /* SwiftUI_Airbnb_CloneApp.swift in Sources */,
+				DF06FCFF2BCECEB100BD0BC6 /* SearchAndFilterBar.swift in Sources */,
 				DF06FCFA2BCEBBB100BD0BC6 /* ExploreView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
