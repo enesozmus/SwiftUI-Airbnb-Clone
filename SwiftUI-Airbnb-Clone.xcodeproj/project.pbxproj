@@ -51,7 +51,11 @@
 		DF06FCDB2BCEB4FB00BD0BC6 /* SwiftUI-Airbnb-Clone */ = {
 			isa = PBXGroup;
 			children = (
-				DF06FCDC2BCEB4FB00BD0BC6 /* SwiftUI_Airbnb_CloneApp.swift */,
+				DF06FCEA2BCEB57F00BD0BC6 /* App */,
+				DF06FCEB2BCEB5A900BD0BC6 /* Core */,
+				DF06FCEC2BCEB5AE00BD0BC6 /* Extensions */,
+				DF06FCEE2BCEB5ED00BD0BC6 /* Models */,
+				DF06FCED2BCEB5C000BD0BC6 /* Utils */,
 				DF06FCDE2BCEB4FB00BD0BC6 /* ContentView.swift */,
 				DF06FCE02BCEB4FC00BD0BC6 /* Assets.xcassets */,
 				DF06FCE22BCEB4FC00BD0BC6 /* Preview Content */,
@@ -65,6 +69,98 @@
 				DF06FCE32BCEB4FC00BD0BC6 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DF06FCEA2BCEB57F00BD0BC6 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				DF06FCDC2BCEB4FB00BD0BC6 /* SwiftUI_Airbnb_CloneApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		DF06FCEB2BCEB5A900BD0BC6 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				DF06FCEF2BCEB67300BD0BC6 /* Explore */,
+				DF06FCF02BCEB67F00BD0BC6 /* Listings */,
+				DF06FCF12BCEB69200BD0BC6 /* MapView */,
+				DF06FCF22BCEB69D00BD0BC6 /* Profile */,
+				DF06FCF32BCEB6CE00BD0BC6 /* Root */,
+				DF06FCF42BCEB6DA00BD0BC6 /* TabBar */,
+				DF06FCF52BCEB6DF00BD0BC6 /* Wishlists */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		DF06FCEC2BCEB5AE00BD0BC6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DF06FCED2BCEB5C000BD0BC6 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		DF06FCEE2BCEB5ED00BD0BC6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DF06FCEF2BCEB67300BD0BC6 /* Explore */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Explore;
+			sourceTree = "<group>";
+		};
+		DF06FCF02BCEB67F00BD0BC6 /* Listings */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Listings;
+			sourceTree = "<group>";
+		};
+		DF06FCF12BCEB69200BD0BC6 /* MapView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MapView;
+			sourceTree = "<group>";
+		};
+		DF06FCF22BCEB69D00BD0BC6 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		DF06FCF32BCEB6CE00BD0BC6 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		DF06FCF42BCEB6DA00BD0BC6 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		DF06FCF52BCEB6DF00BD0BC6 /* Wishlists */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Wishlists;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
