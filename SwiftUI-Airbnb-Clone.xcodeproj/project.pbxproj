@@ -11,6 +11,8 @@
 		DF06FCDF2BCEB4FB00BD0BC6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF06FCDE2BCEB4FB00BD0BC6 /* ContentView.swift */; };
 		DF06FCE12BCEB4FC00BD0BC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF06FCE02BCEB4FC00BD0BC6 /* Assets.xcassets */; };
 		DF06FCE42BCEB4FC00BD0BC6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF06FCE32BCEB4FC00BD0BC6 /* Preview Assets.xcassets */; };
+		DF06FCFA2BCEBBB100BD0BC6 /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF06FCF92BCEBBB100BD0BC6 /* ExploreView.swift */; };
+		DF06FCFD2BCEBC7B00BD0BC6 /* ListingItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF06FCFC2BCEBC7B00BD0BC6 /* ListingItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		DF06FCDE2BCEB4FB00BD0BC6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DF06FCE02BCEB4FC00BD0BC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DF06FCE32BCEB4FC00BD0BC6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DF06FCF92BCEBBB100BD0BC6 /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
+		DF06FCFC2BCEBC7B00BD0BC6 /* ListingItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +121,7 @@
 		DF06FCEF2BCEB67300BD0BC6 /* Explore */ = {
 			isa = PBXGroup;
 			children = (
+				DF06FCF62BCEBAAD00BD0BC6 /* View */,
 			);
 			path = Explore;
 			sourceTree = "<group>";
@@ -124,6 +129,7 @@
 		DF06FCF02BCEB67F00BD0BC6 /* Listings */ = {
 			isa = PBXGroup;
 			children = (
+				DF06FCFB2BCEBC2000BD0BC6 /* View */,
 			);
 			path = Listings;
 			sourceTree = "<group>";
@@ -161,6 +167,22 @@
 			children = (
 			);
 			path = Wishlists;
+			sourceTree = "<group>";
+		};
+		DF06FCF62BCEBAAD00BD0BC6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DF06FCF92BCEBBB100BD0BC6 /* ExploreView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DF06FCFB2BCEBC2000BD0BC6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DF06FCFC2BCEBC7B00BD0BC6 /* ListingItemView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,8 +255,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF06FCFD2BCEBC7B00BD0BC6 /* ListingItemView.swift in Sources */,
 				DF06FCDF2BCEB4FB00BD0BC6 /* ContentView.swift in Sources */,
 				DF06FCDD2BCEB4FB00BD0BC6 /* SwiftUI_Airbnb_CloneApp.swift in Sources */,
+				DF06FCFA2BCEBBB100BD0BC6 /* ExploreView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
