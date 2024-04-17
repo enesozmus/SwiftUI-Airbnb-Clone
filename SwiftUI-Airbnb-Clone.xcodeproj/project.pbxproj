@@ -17,6 +17,7 @@
 		DF06FD012BCED71400BD0BC6 /* ListingDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF06FD002BCED71400BD0BC6 /* ListingDetailView.swift */; };
 		DF06FD042BCED79300BD0BC6 /* ListingImageCarousalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF06FD032BCED79300BD0BC6 /* ListingImageCarousalView.swift */; };
 		DFA54AED2BCFC27D000A9BDB /* DestinationSerachView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA54AEC2BCFC27D000A9BDB /* DestinationSerachView.swift */; };
+		DFF1986E2BCFEEF300152F47 /* ProfileLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF1986D2BCFEEF300152F47 /* ProfileLoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		DF06FD002BCED71400BD0BC6 /* ListingDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingDetailView.swift; sourceTree = "<group>"; };
 		DF06FD032BCED79300BD0BC6 /* ListingImageCarousalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingImageCarousalView.swift; sourceTree = "<group>"; };
 		DFA54AEC2BCFC27D000A9BDB /* DestinationSerachView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationSerachView.swift; sourceTree = "<group>"; };
+		DFF1986D2BCFEEF300152F47 /* ProfileLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileLoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +155,7 @@
 		DF06FCF22BCEB69D00BD0BC6 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				DFF1986D2BCFEEF300152F47 /* ProfileLoginView.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF06FCFD2BCEBC7B00BD0BC6 /* ListingItemView.swift in Sources */,
+				DFF1986E2BCFEEF300152F47 /* ProfileLoginView.swift in Sources */,
 				DFA54AED2BCFC27D000A9BDB /* DestinationSerachView.swift in Sources */,
 				DF06FCDF2BCEB4FB00BD0BC6 /* ContentView.swift in Sources */,
 				DF06FCDD2BCEB4FB00BD0BC6 /* SwiftUI_Airbnb_CloneApp.swift in Sources */,
