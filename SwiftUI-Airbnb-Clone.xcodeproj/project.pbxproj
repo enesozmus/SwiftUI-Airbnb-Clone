@@ -16,6 +16,7 @@
 		DF06FCFF2BCECEB100BD0BC6 /* SearchAndFilterBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF06FCFE2BCECEB100BD0BC6 /* SearchAndFilterBar.swift */; };
 		DF06FD012BCED71400BD0BC6 /* ListingDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF06FD002BCED71400BD0BC6 /* ListingDetailView.swift */; };
 		DF06FD042BCED79300BD0BC6 /* ListingImageCarousalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF06FD032BCED79300BD0BC6 /* ListingImageCarousalView.swift */; };
+		DFA54AED2BCFC27D000A9BDB /* DestinationSerachView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA54AEC2BCFC27D000A9BDB /* DestinationSerachView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		DF06FCFE2BCECEB100BD0BC6 /* SearchAndFilterBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAndFilterBar.swift; sourceTree = "<group>"; };
 		DF06FD002BCED71400BD0BC6 /* ListingDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingDetailView.swift; sourceTree = "<group>"; };
 		DF06FD032BCED79300BD0BC6 /* ListingImageCarousalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingImageCarousalView.swift; sourceTree = "<group>"; };
+		DFA54AEC2BCFC27D000A9BDB /* DestinationSerachView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationSerachView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +183,7 @@
 			children = (
 				DF06FCF92BCEBBB100BD0BC6 /* ExploreView.swift */,
 				DF06FCFE2BCECEB100BD0BC6 /* SearchAndFilterBar.swift */,
+				DFA54AEC2BCFC27D000A9BDB /* DestinationSerachView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF06FCFD2BCEBC7B00BD0BC6 /* ListingItemView.swift in Sources */,
+				DFA54AED2BCFC27D000A9BDB /* DestinationSerachView.swift in Sources */,
 				DF06FCDF2BCEB4FB00BD0BC6 /* ContentView.swift in Sources */,
 				DF06FCDD2BCEB4FB00BD0BC6 /* SwiftUI_Airbnb_CloneApp.swift in Sources */,
 				DF06FCFF2BCECEB100BD0BC6 /* SearchAndFilterBar.swift in Sources */,
