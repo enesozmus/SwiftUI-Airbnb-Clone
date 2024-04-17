@@ -17,17 +17,37 @@ struct DestinationSerachView: View {
     @Binding var show: Bool
     @State private var destination = ""
     @State private var selectedOption: DestinationSearchOptions = .location
+    
+    @State private var startDate = Date()
+    @State private var endDate = Date()
+    @State private var numGuests = 0
+    
     var body: some View {
         VStack {
-            Button {
-                withAnimation() {
-                    show.toggle()
+            HStack {
+                // Back Button
+                Button{
+                    withAnimation(.snappy) {
+                        show.toggle()
+                    }
+                } label: {
+                    Image(systemName: "xmark.circle")
+                        .imageScale(.large)
+                        .foregroundStyle(.black)
                 }
-            } label: {
-                Image(systemName: "xmark.circle")
-                    .imageScale(.large)
+                
+                Spacer()
+                
+                if !destination.isEmpty {
+                    Button("Clear") {
+                        destination = ""
+                    }
                     .foregroundStyle(.black)
+                    .font(.subheadline)
+                    .fontWeight(.semibold)
+                }
             }
+            .padding()
             
             // location selection view
             VStack {
@@ -64,12 +84,30 @@ struct DestinationSerachView: View {
             .onTapGesture {
                 withAnimation(.snappy) { selectedOption = .location }
             }
-            
-            
+            // ...
             // date selection view
             VStack(alignment: .leading) {
                 if selectedOption == .dates {
-                    Text("Show expanded view - dates")
+                    Text("When's your trip?")
+                        .font(.title2)
+                        .fontWeight(.semibold)
+                    
+                    VStack{
+                        DatePicker("From", selection: $startDate, displayedComponents: .date)
+                            .onTapGesture(count: 99, perform: {
+                                // overrides tap gesture to fix ios 17.1 bug
+                            })
+                        
+                        Divider()
+                        
+                        DatePicker("To", selection: $endDate, displayedComponents: .date)
+                            .onTapGesture(count: 99, perform: {
+                                // overrides tap gesture to fix ios 17.1 bug
+                            })
+                    }
+                    .foregroundStyle(.gray)
+                    .font(.subheadline)
+                    .fontWeight(.semibold)
                 } else {
                     CollapsedPickerView(title: "When", description: "Add dates")
                 }
@@ -79,16 +117,31 @@ struct DestinationSerachView: View {
             .onTapGesture {
                 withAnimation(.snappy) { selectedOption = .dates }
             }
+            // ...
             // num guests view
-            VStack {
+            VStack(alignment: .leading) {
                 if selectedOption == .guests {
-                    Text("Show expanded view - guests")
+                    Text("Who's coming?")
+                        .font(.title2)
+                        .fontWeight(.semibold)
+                    Stepper("\(numGuests) Adults", value: $numGuests, in: 0...12, step: 1)
+                    //                    Stepper {
+                    //                        Text("\(numGuests) Adults")
+                    //                    } onIncrement: {
+                    //                        numGuests += 1
+                    //                    } onDecrement: {
+                    //                        guard numGuests > 0 else { return }
+                    //                        numGuests -= 1
+                    //                    }
+                        .onTapGesture(count: 99, perform: {
+                            // overrides tap gesture to fix ios 17.1 bug
+                        })
                 } else {
                     CollapsedPickerView(title: "Who", description: "Add guests")
                 }
             }
             .modifier(CollapsibleDestinationSearchViewModifier())
-            .frame(height: selectedOption == .dates ? 120 : 64)
+            .frame(height: selectedOption == .guests ? 120 : 64)
             .onTapGesture {
                 withAnimation(.snappy) { selectedOption = .guests }
             }
@@ -102,7 +155,7 @@ struct DestinationSerachView: View {
     DestinationSerachView(show: .constant(false))
 }
 
-// ...
+// custom view modifier
 struct CollapsibleDestinationSearchViewModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
