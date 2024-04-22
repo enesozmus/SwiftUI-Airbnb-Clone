@@ -12,6 +12,18 @@ struct ListingDetailView: View {
     
     @Environment(\.dismiss) var dismiss
     let listing: Listing
+    @State private var cameraPosition: MapCameraPosition
+    
+    init(listing: Listing) {
+        self.listing = listing
+        
+        let region = MKCoordinateRegion(
+            center: CLLocationCoordinate2D(latitude: listing.latitude,
+                                           longitude: listing.longitude),
+            span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
+        )
+        self._cameraPosition = State(initialValue: .region(region))
+    }
     
     var body: some View {
         ScrollView {
@@ -114,19 +126,20 @@ struct ListingDetailView: View {
                 
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 16) {
-                        ForEach(1 ... listing.numberOfBedrooms, id: \.self) { bedroom in
-                            VStack {
-                                Image(systemName: "bed.double")
-                                Text("Bedroom \(bedroom)")
-                            }
-                            .frame(width: 132, height: 100)
-                            .overlay {
-                                RoundedRectangle(cornerRadius: 12)
-                                    .stroke(lineWidth: 1)
-                                    .foregroundColor(.gray)
+                        if listing.numberOfBedrooms != 0 {
+                            ForEach(1 ... listing.numberOfBedrooms, id: \.self) { bedroom in
+                                VStack {
+                                    Image(systemName: "bed.double")
+                                    Text("Bedroom \(bedroom)")
+                                }
+                                .frame(width: 132, height: 100)
+                                .overlay {
+                                    RoundedRectangle(cornerRadius: 12)
+                                        .stroke(lineWidth: 1)
+                                        .foregroundColor(.gray)
+                                }
                             }
                         }
-                        
                     }
                 }
                 .scrollTargetBehavior(.paging)
@@ -159,7 +172,7 @@ struct ListingDetailView: View {
                 Text("Where you will be")
                     .font(.headline)
                 
-                Map()
+                Map(position: $cameraPosition)
                     .frame(height: 200)
                     .clipShape(RoundedRectangle(cornerRadius: 12))
             }
