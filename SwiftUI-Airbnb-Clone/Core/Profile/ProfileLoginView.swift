@@ -7,7 +7,23 @@
 
 import SwiftUI
 
+enum ActiveSheet: Identifiable {
+    case first, second
+    
+    var id: Int {
+        hashValue
+    }
+}
+
 struct ProfileLoginView: View {
+    
+    @State var activeSheet: ActiveSheet?
+    private let service: AuthService
+    
+    init(service: AuthService) {
+        self.service = service
+    }
+    
     var body: some View {
         // ...
         VStack {
@@ -21,7 +37,7 @@ struct ProfileLoginView: View {
                         .font(.subheadline)
                 }
                 Button {
-                    print("Log in")
+                    activeSheet = .first
                 } label: {
                     Text("Log in")
                         .foregroundColor(.white)
@@ -34,13 +50,26 @@ struct ProfileLoginView: View {
                 HStack {
                     Text("Don't have an account?")
                     
-                    Text("Sign up")
-                        .fontWeight(.semibold)
-                        .underline()
+                    Button {
+                        activeSheet = .second
+                    } label: {
+                        Text("Sign up")
+                            .fontWeight(.semibold)
+                            .underline()
+                    }
                 }
                 .font(.caption)
             }
-            
+            .sheet(item: $activeSheet) { item in
+                switch item {
+                case .first:
+                    LoginView(service: service)
+                case .second:
+                    RegistrationView()
+                }
+            }
+            Spacer()
+                .frame(height: 40)
             // ...
             // profile options
             VStack(spacing: 24) {
@@ -57,5 +86,5 @@ struct ProfileLoginView: View {
 }
 
 #Preview {
-    ProfileLoginView()
+    ProfileLoginView(service: AuthService())
 }

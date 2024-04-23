@@ -8,6 +8,13 @@
 import SwiftUI
 
 struct MainTabView: View {
+    
+    private let service: AuthService
+    
+    init(service: AuthService) {
+        self.service = service
+    }
+    
     var body: some View {
         TabView {
             ExploreView()
@@ -16,12 +23,12 @@ struct MainTabView: View {
             WishlistsView()
                 .tabItem { Label("Wishlists", systemImage: "heart") }
             
-            ProfileLoginView()
+            ProfileLoginView(service: service)
                 .tabItem { Label("Profile", systemImage: "person.circle") }
         }
     }
 }
 
 #Preview {
-    MainTabView()
+    MainTabView(service: AuthService())
 }
