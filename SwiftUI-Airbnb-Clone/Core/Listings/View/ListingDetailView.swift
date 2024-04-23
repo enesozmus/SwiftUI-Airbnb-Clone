@@ -51,9 +51,10 @@ struct ListingDetailView: View {
                     .font(.title)
                     .fontWeight(.semibold)
                 VStack(alignment: .leading) {
+                    // rating
                     HStack(spacing: 2) {
                         Image(systemName: "star.fill")
-                        Text("\(listing.rating)")
+                        Text(String(format: "%.2f", listing.rating))
                         Text(" - ")
                         Text("28 reviews")
                             .underline()
@@ -172,7 +173,15 @@ struct ListingDetailView: View {
                 Text("Where you will be")
                     .font(.headline)
                 
-                Map(position: $cameraPosition)
+                Map(position: $cameraPosition) {
+                    Marker(
+                        listing.title,
+                        coordinate: CLLocationCoordinate2D(
+                            latitude: listing.latitude,
+                            longitude: listing.longitude
+                        )
+                    )
+                }
                     .frame(height: 200)
                     .clipShape(RoundedRectangle(cornerRadius: 12))
             }
