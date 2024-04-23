@@ -5,6 +5,7 @@
 //  Created by enesozmus on 22.04.2024.
 //
 
+import CoreLocation
 import Foundation
 
 struct Listing: Identifiable, Codable, Hashable {
@@ -32,6 +33,10 @@ struct Listing: Identifiable, Codable, Hashable {
     var features: [ListingFeatures]
     var amenities: [ListingAmenities]
     let type: ListingType
+    
+    var coordinates: CLLocationCoordinate2D {
+        return .init(latitude: latitude, longitude: longitude)
+    }
 }
 
 enum ListingFeatures: Int, Codable, Identifiable, Hashable {
