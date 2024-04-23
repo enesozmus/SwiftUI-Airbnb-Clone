@@ -151,8 +151,8 @@
 			isa = PBXGroup;
 			children = (
 				DF6F5ACF2BD69995008B43EF /* Service */,
-				DF6F5ACC2BD698CC008B43EF /* ViewModel */,
 				DF06FCF62BCEBAAD00BD0BC6 /* View */,
+				DF6F5ACC2BD698CC008B43EF /* ViewModel */,
 			);
 			path = Explore;
 			sourceTree = "<group>";

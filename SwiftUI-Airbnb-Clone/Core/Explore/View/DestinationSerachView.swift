@@ -15,7 +15,8 @@ enum DestinationSearchOptions {
 
 struct DestinationSerachView: View {
     @Binding var show: Bool
-    @State private var destination = ""
+    @ObservedObject var viewModel: ExploreViewModel
+    
     @State private var selectedOption: DestinationSearchOptions = .location
     
     @State private var startDate = Date()
@@ -28,6 +29,7 @@ struct DestinationSerachView: View {
                 // Back Button
                 Button{
                     withAnimation(.snappy) {
+                        viewModel.updateListingsForLocation()
                         show.toggle()
                     }
                 } label: {
@@ -38,9 +40,10 @@ struct DestinationSerachView: View {
                 
                 Spacer()
                 
-                if !destination.isEmpty {
+                if !viewModel.searchLocation.isEmpty {
                     Button("Clear") {
-                        destination = ""
+                        viewModel.searchLocation = ""
+                        viewModel.updateListingsForLocation()
                     }
                     .foregroundStyle(.black)
                     .font(.subheadline)
@@ -60,9 +63,10 @@ struct DestinationSerachView: View {
                             Image(systemName: "magnifyingglass")
                                 .imageScale(.small)
                             
-                            TextField("Search destinations", text: $destination)
+                            TextField("Search destinations", text: $viewModel.searchLocation)
                                 .font(.subheadline)
                                 .onSubmit {
+                                    viewModel.updateListingsForLocation()
                                     show.toggle()
                                 }
                         }
@@ -152,7 +156,10 @@ struct DestinationSerachView: View {
 }
 
 #Preview {
-    DestinationSerachView(show: .constant(false))
+    DestinationSerachView(
+        show: .constant(false),
+        viewModel: ExploreViewModel(service: ExploreService())
+    )
 }
 
 // custom view modifier
