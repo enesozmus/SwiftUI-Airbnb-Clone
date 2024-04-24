@@ -11,10 +11,11 @@ import SwiftUI
 struct SwiftUI_Airbnb_CloneApp: App {
     
     let authService = AuthService()
+    let userService = UserService()
     
     var body: some Scene {
         WindowGroup {
-            ContentView(authService: authService)
+            ContentView(authService: authService, userService: userService)
         }
     }
 }

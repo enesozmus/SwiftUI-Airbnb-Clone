@@ -10,6 +10,7 @@ import SwiftUI
 struct MainTabView: View {
     
     private let service: AuthService
+    @EnvironmentObject var contentViewModel: ContentViewModel
     
     init(service: AuthService) {
         self.service = service
@@ -20,10 +21,10 @@ struct MainTabView: View {
             ExploreView()
                 .tabItem { Label("Explore", systemImage: "magnifyingglass") }
             
-            WishlistsView()
+            WishlistsView(service: AuthService())
                 .tabItem { Label("Wishlists", systemImage: "heart") }
             
-            ProfileLoginView(service: service)
+            ProfileView(service: service, user: contentViewModel.currentUser)
                 .tabItem { Label("Profile", systemImage: "person.circle") }
         }
     }
